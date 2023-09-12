@@ -16,21 +16,25 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
 public class UserController {
-  
-  private final UserService service;
+
+  private final UserService userService;
 
   @PostMapping
-  public void save(
+  public ResponseEntity<User> create(
     @RequestBody User user
   ) {
-    service.saveUser(user);
+    try {
+    User res = userService.create(user);
+    return ResponseEntity.ok(res);
+    } catch(Exception e) {
+      return null;
+    }
   }
 
   @GetMapping("/all")
-  public ResponseEntity<List<User>> findAllUsers(
-    @RequestParam(required=false) Integer limit,
-    @RequestParam(required=false) Integer page
-  ) {
-    return ResponseEntity.ok(service.findAllUsers(limit, page));
+  public ResponseEntity<List<User>> findAll(
+      @RequestParam(required = false) Integer limit,
+      @RequestParam(required = false) Integer page) {
+    return ResponseEntity.ok(userService.findAll(limit, page));
   }
 }
