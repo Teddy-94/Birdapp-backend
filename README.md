@@ -2,6 +2,12 @@
 
 This is the Birdapp microservices backend, build in Spring Boot. 
 
+## TODO
+* These services will eventually be dockerized to enable easy deployment and running.
+* Auth service
+* Eventually it would be cool to use a graph db for the users. 
+* Target is to get all of the birdapp deployed somewhere. possibly aws
+
 ## Services
 
 ### Chirps
