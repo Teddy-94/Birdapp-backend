@@ -1,0 +1,58 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-DiscoveryApplication<discovery>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.birdapp.discovery.DiscoveryApplication",
+      "projectName": "discovery",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=36515 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=discovery"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-UsersApplication<users>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.birdapp.users.UsersApplication",
+      "projectName": "users",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=34209 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=users"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-GatewayApplication<gateway>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.birdapp.gateway.GatewayApplication",
+      "projectName": "gateway",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=45381 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=gateway"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-ChirpsApplication<chirps>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.birdapp.chirps.ChirpsApplication",
+      "projectName": "chirps",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=37655 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=chirps"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-ConfigServerApplication<config-server>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.birdapp.configserver.ConfigServerApplication",
+      "projectName": "config-server",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
