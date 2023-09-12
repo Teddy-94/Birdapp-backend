@@ -20,6 +20,7 @@ public class UserService {
       return repository.create(user);
     } catch (Exception e) {
       // TODO: handle exception
+      return null;
     }
   }
 
